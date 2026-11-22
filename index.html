@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course materials dashboard for B.Tech Artificial Intelligence and Data Science, Third Year, EGS Pillay Engineering College.">
+  <title>Sivasubramaniyan Website | AI & DS Course Materials</title>
+  <style>
+    :root {
+      --navy: #10264a; --blue: #2563eb; --muted: #64748b;
+      --bg: #f4f7fc; --card: #ffffff; --line: #e5eaf2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: var(--bg); color: #172033; min-height: 100vh;
+    }
+    .topbar {
+      background: var(--navy); color: white; padding: 18px 22px;
+      box-shadow: 0 5px 22px #10264a20;
+    }
+    .top-inner {
+      max-width: 1120px; margin: auto; display: flex; align-items: center;
+      gap: 13px;
+    }
+    .brand-icon {
+      width: 48px; height: 48px; display: grid; place-items: center;
+      border-radius: 15px; background: #ffffff18; font-size: 25px;
+    }
+    .college { font-size: 14px; font-weight: 800; letter-spacing: .08em; }
+    .subcollege { color: #cbd8ee; font-size: 12px; margin-top: 4px; }
+    main { max-width: 1120px; margin: 42px auto; padding: 0 22px 36px; }
+    .hero {
+      background: linear-gradient(120deg, #153568, #2563eb);
+      color: white; padding: 34px; border-radius: 24px; position: relative;
+      overflow: hidden; box-shadow: 0 16px 35px #1d4ed822;
+    }
+    .hero:after {
+      content: "✦"; position: absolute; right: 42px; top: -45px;
+      font-size: 210px; color: #ffffff12; transform: rotate(15deg);
+    }
+    .eyebrow { color: #bfdbfe; font-size: 12px; font-weight: 800; letter-spacing: .16em; }
+    h1 { font-size: clamp(27px, 5vw, 43px); line-height: 1.13; margin: 12px 0 10px; max-width: 730px; }
+    .hero p { margin: 0; color: #dbeafe; font-size: 15px; line-height: 1.6; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin: 36px 0 17px; }
+    h2 { margin: 0; font-size: 22px; }
+    .section-note { color: var(--muted); font-size: 13px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .course {
+      --accent: #2563eb; --soft: #eff6ff;
+      display: flex; align-items: center; gap: 17px; min-height: 142px;
+      background: var(--card); border: 1px solid var(--line); border-radius: 19px;
+      padding: 22px; text-decoration: none; color: inherit;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: 0 5px 18px #15284b08;
+    }
+    .course:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 13px 28px #15284b14; }
+    .course:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .course-icon {
+      flex: 0 0 62px; width: 62px; height: 62px; display: grid; place-items: center;
+      background: var(--soft); color: var(--accent); border-radius: 17px;
+    }
+    .course-icon svg { width: 31px; height: 31px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .course-info { min-width: 0; flex: 1; }
+    .code { color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+    .course h3 { font-size: 17px; margin: 7px 0 8px; line-height: 1.3; }
+    .open { color: var(--muted); font-size: 12px; }
+    .arrow { color: var(--accent); font-size: 23px; margin-left: auto; }
+    .os { --accent:#2563eb; --soft:#eff6ff; }
+    .mca { --accent:#7c3aed; --soft:#f3e8ff; }
+    .bdf { --accent:#059669; --soft:#ecfdf5; }
+    .dlt { --accent:#ea580c; --soft:#fff7ed; }
+    .tip {
+      margin-top: 24px; background: #eef4ff; border: 1px solid #dbeafe;
+      border-radius: 14px; padding: 15px 17px; color: #345078;
+      font-size: 13px; line-height: 1.6;
+    }
+    footer { text-align: center; color: #7b8799; font-size: 12px; padding: 8px 20px 28px; }
+    @media (max-width: 650px) {
+      main { margin-top: 25px; padding-inline: 15px; }
+      .topbar { padding: 15px; }
+      .hero { padding: 26px 22px; }
+      .grid { grid-template-columns: 1fr; gap: 13px; }
+      .course { min-height: 120px; padding: 18px; }
+      .section-head { align-items: start; flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-inner">
+      <div class="brand-icon" aria-hidden="true">🎓</div>
+      <div>
+        <div class="college">SIVASUBRAMANIYAN WEBSITE</div>
+        <div class="subcollege">EGS Pillay Engineering College · Nagapattinam</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">STUDENT LEARNING PORTAL</div>
+      <h1>B.Tech Artificial Intelligence &amp; Data Science</h1>
+      <p>Third Year · Full Course Materials<br>All your subject resources in one convenient place.</p>
+    </section>
+
+    <div class="section-head">
+      <h2>Course Materials</h2>
+      <div class="section-note">Select a subject to open its materials ↗</div>
+    </div>
+
+    <section class="grid" aria-label="Available course materials">
+      <a class="course os" href="https://docs.google.com/document/d/1HDNepDL8QzRtcodLkmnsi5YCJXToypvcmyS5PtQIf4k/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open Operating System materials">
+        <div class="course-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9l2 2-2 2M12 13h4"/></svg>
+        </div>
+        <div class="course-info"><div class="code">OS</div><h3>Operating System</h3><div class="open">Open course materials</div></div>
+        <div class="arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a class="course mca" href="https://drive.google.com/drive/folders/158BUEqUqUOqYgPp2v8m5VJuj0ORcHW0V?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Modern Computer Architecture materials">
+        <div class="course-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 1v3m6-3v3M9 20v3m6-3v3M1 9h3m-3 6h3m16-6h3m-3 6h3M10 10h4v4h-4z"/></svg>
+        </div>
+        <div class="course-info"><div class="code">MCA</div><h3>Modern Computer Architecture</h3><div class="open">Open course materials</div></div>
+        <div class="arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a class="course bdf" href="https://drive.google.com/drive/folders/1y5eOzJ3ZAK3WrRupkUG6Q0MDEnsISgMV?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Big Data Frameworks materials">
+        <div class="course-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+        </div>
+        <div class="course-info"><div class="code">BDF</div><h3>Big Data Frameworks</h3><div class="open">Open course materials</div></div>
+        <div class="arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a class="course dlt" href="https://drive.google.com/drive/folders/1-v7kEhonrmVN-8qNxqdyKaLYuxel9Ky4?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Deep Learning Techniques materials">
+        <div class="course-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 0-4 12.7V19h8v-3.3A7 7 0 0 0 12 3Z"/><path d="M9 22h6M9 12l2-2 2 2 2-2M12 10v5"/></svg>
+        </div>
+        <div class="course-info"><div class="code">DLT</div><h3>Deep Learning Techniques</h3><div class="open">Open course materials</div></div>
+        <div class="arrow" aria-hidden="true">↗</div>
+      </a>
+    </section>
+
+    <div class="tip"><strong>Note:</strong> If a course link asks you to sign in or shows an access request, open Google Drive using your college or permitted Google account. The owner must allow you to view the files.</div>
+  </main>
+
+  <footer>© 2026 · B.Tech AI &amp; DS · EGS Pillay Engineering College</footer>
+</body>
+</html>
